@@ -38,6 +38,9 @@ function(colcon_add_subdirectories)
   endforeach()
 endfunction()
 
+#Install path
+list(APPEND CMAKE_PREFIX_PATH "${PROJECT_SOURCE_DIR}/install")
+
 colcon_add_subdirectories(
 	BUILD_BASE "${PROJECT_SOURCE_DIR}/build"
 	BASE_PATHS "${PROJECT_SOURCE_DIR}/src/"
